@@ -1,2 +1,13 @@
-# Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website
-Fire Eye is a robust and fixed lookout system capable of real-time fire detection. Our system employs two cutting-edge deep learning algorithms (YOLO-v5 and Inception-v3), designed to detect fires at their earliest stages. We have use Flask Python web development framework to develop the backend and frontend of our application.
+# Forest Fire and Smoke Detection System
+
+![Interface](https://github.com/Amerzish-25/Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website/assets/106583511/a4848eca-d343-4785-8779-8a7c25059190)
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Dataset](#dataset)
+- [Results](#results)
+- [Contributing](#contributing)
+- [License](#license)
