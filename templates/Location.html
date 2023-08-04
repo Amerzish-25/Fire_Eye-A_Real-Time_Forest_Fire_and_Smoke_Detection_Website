@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fire Eye - Location</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/Location.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Elsie&family=Fjalla+One&family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{url_for('static', filename='Fire_logo_title.jpg')}}" type="image/jpg" sizes="128x128">
+  </head>
+  <body>
+    <div class="Section-1">
+      <div class="Nav-Bar">
+      <ul class="Navigation-Bar">
+          <a class="title" href="{{url_for('View.Home')}}"><img class="logo" src="{{url_for('static', filename='Fire_Logo.png')}}" width="100px" height="100px"></a>
+          <a class="topnav-left" href="{{url_for('View.Home')}}">Fire Eye</a>
+      <div class="topnav-right">
+          <li class="Nav-Link"><a  href="{{url_for('View.Home')}}"><i style="padding-right:10px;" class="fa fa-home"></i>HOME</a></li>
+          <li class="Nav-Link"><a  href="{{url_for('View.About')}}"><i style="padding-right:10px;" class="fa fa-tree"></i>ABOUT</a></li>
+          <li class="Nav-Link"><a  href="{{url_for('View.Home', _anchor='section3')}}"><i style="padding-right:10px;" class="fa fa-list-ul"></i>SERVICES</a></li>
+          <li class="Nav-Link"><a  href="{{url_for('View.Home', _anchor='section6')}}"><i style="padding-right:10px;" class="fa fa-leaf"></i>NEWS</a></li>
+          <li class="Nav-Link"><a  href="{{url_for('.Location', _anchor='section4')}}"><i style="padding-right:10px;" class="fa fa-phone"></i>CONTACT</a></li>
+      </div>
+      </ul>
+      </div>
+
+      <div class="Content">
+      <div class="image-overlay">
+          <div class="image">
+          </div>
+      </div>
+      <div class="Content-text">
+      <h1>LOCATION TRACKER</h1>
+      <a href="{{url_for('View.Home')}}">Home&nbsp&nbsp&nbsp&nbsp<i class="fa fa-angle-right"></i></a>
+      <p>&nbsp&nbsp&nbsp&nbspLocation Tracker</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="Section-2" >
+        <div class="LocTitle">
+            <img src="https://static.vecteezy.com/system/resources/previews/011/318/893/original/green-leaf-branch-watercolor-free-png.png" height="100px" width="100px">
+            <h1>FOREST FIRE LOCATION TRACKER</h1>
+            
+          </div>
+          <div class="LocCordinates">
+            <button onclick="getlocation();"><i class="fa fa-location-crosshairs"></i>&nbsp&nbspGET COORDINATES</button> 
+            <p id="loc"></p>
+          </div>
+            <div id="map"></div> 
+    </div>
+
+    <div class="Section-4" id="section4">
+      <img src="/static/toppng.com-forest-png-image-forest-clip-art-black-and-white-2334x761.png" width="100%" height="320px">
+      <div class="overlay">
+          <div class="Column Column-1">
+              <h1 class="footer-h1">FIRE EYE</h1>
+              <p>
+                 System that will analyze the scope of artificial intelligence for early 
+                 detection of fire and sending alerts with images and videos from 
+                 CCTV footage. 
+              </p>
+          </div>
+
+          <div class="Column Column-2">
+              <h1 class="footer-h1">EXPLORE</h1>
+              <p><a href="{{url_for('View.Home')}}">Home</a></p>
+              <p><a href="{{url_for('View.About')}}">About</a></p>
+              <p><a href="{{url_for('.Home', _anchor='section3')}}">Services</a></p>
+              <p><a href="{{url_for('.Home', _anchor='section6')}}">News</a></p>
+          </div>
+
+          <div class="Column Column-3">
+              <h1 class="footer-h1">CONTACT</h1>
+              <p><i class="fa fa-home"></i>&nbspRawalpindi, Punjab, Pakistan</p>
+              <p class="Column-2"><i class="fa fa-envelope-square"></i><a  href="{{url_for('.Home', _anchor='section6')}}">&nbsp&nbspfypforestfire@gmail.com</a></p>
+              <p><i class="fa fa-phone"></i>&nbsp&nbsp0345-7865345</p>
+          </div>
+          <div class="Column Column-4">
+              <h1 class="footer-h1">FOLLOW US</h1>
+              <p style="display: inline-block;"><a style="background-color: #3b5998; padding-left: 17.5px; padding-right: 17.5px;" href="https://www.facebook.com/" role="button"><i class="fa-brands fa-facebook-f"></i></a></p>
+              <p style="display: inline-block;"><a style="background-color: #55acee" href="https://twitter.com/" role="button"><i class="fa-brands fa-twitter"></i></a></p>
+              <p style="display: inline-block;"><a style="background-color: #dd4b39" href="{{url_for('View.Home')}}" role="button"><i class="fa-brands fa-google"></i></a></p><br>
+              <p style="display: inline-block;"><a style="background-color: #ac2bac" href="https://www.instagram.com/?hl=en" role="button"><i class="fa-brands fa-instagram"></i></a></p>
+              <p style="display: inline-block;"><a style="background-color: #0082ca; padding-left: 16px; padding-right: 16px;" href="https://www.linkedin.com/" role="button"><i class="fa-brands fa-linkedin"></i></a></p>
+              <p style="display: inline-block;"><a style="background-color: #333333" href="https://github.com/" role="button"><i class="fa-brands fa-github"></i></a></p>
+          </div>
+      </div>
+  </div>
+    
+<script>
+       var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+
+function sendLocation(latt, long) {
+    $.ajax({
+      type: 'POST',
+      url: '/store_location',
+      data: {
+        latitude: latt,
+        longitude: long
+      },
+      success: function(response) {
+        console.log('Location stored successfully');
+      },
+      error: function(error) {
+        console.log('Error storing location:', error);
+      }
+    });
+  }
+
+function getlocation(){ 
+            if(navigator.geolocation){ 
+                navigator.geolocation.getCurrentPosition(showPos, showErr); 
+            }
+            else{
+                alert("Sorry! your Browser does not support Geolocation API")
+            }
+        } 
+
+function showPos(position){ 
+            latt = position.coords.latitude; 
+            long = position.coords.longitude; 
+            acc = position.coords.accuracy;
+            var lattlong = new google.maps.LatLng(latt, long); 
+            var myOptions = {
+                center: lattlong, 
+                zoom: 15, 
+                mapTypeControl: true, 
+                navigationControlOptions: {style:google.maps.NavigationControlStyle.SMALL} 
+            } 
+            var maps = new google.maps.Map(document.getElementById("map"), myOptions); 
+            var markers = new google.maps.Marker({position:lattlong, map:maps, title:"You are here!"}); 
+            document.getElementById("loc").innerHTML = "<span style='font-weight:bold;'>Latitude: &nbsp</span>" + latt + "<br>" + "<span style='font-weight:bold;'>Longitude: &nbsp</span>" + long + "<br>" + "<span style='font-weight:bold;'>Estimation Accurate within: &nbsp</span>" + Math.round(acc) + " Meters";
+            sendLocation(latt, long);
+          } 
+ function showErr(error) {
+              switch(error.code){
+              case error.PERMISSION_DENIED:
+             alert("User denied the request for Geolocation API.");
+              break;
+             case error.POSITION_UNAVAILABLE:
+             alert("USer location information is unavailable.");
+            break;
+            case error.TIMEOUT:
+            alert("The request to get user location timed out.");
+            break;
+           case error.UNKNOWN_ERROR:
+            alert("An unknown error occurred.");
+            break;
+           }
+        }     
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='mapsJavaScriptAPI.js')}}" async defer></script>
+  
+  </body>
+</html>

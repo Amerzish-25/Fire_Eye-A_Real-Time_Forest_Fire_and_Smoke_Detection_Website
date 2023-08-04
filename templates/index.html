@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Elsie&family=Fjalla+One&family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/Home_Style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="icon" href="{{url_for('static', filename='Fire_logo_title.jpg')}}" type="image/jpg" sizes="128x128" >
+    <title>Fire Eye</title>
+</head>
+
+<body>
+<section>
+<div class="Images"></div>
+<div class="Section-1">
+    <div class="image-overlay">
+    <ul class="Navigation-Bar">
+        <a class="title" href="{{url_for('View.Home')}}"><img class="logo" src="{{url_for('static', filename='logo.png')}}" height="110px" width="100px"></a>
+        <a class="topnav-left" href="{{url_for('View.Home')}}">Fire Eye</a>
+        <div class="topnav-right">
+        <li class="Nav-Link"><a  href="{{url_for('View.Home')}}"><i style="padding-right:10px;" class="fa fa-home"></i>HOME</a></li>
+        <li class="Nav-Link"><a  href="{{url_for('.Home', _anchor='section2')}}"><i style="padding-right:10px;" class="fa fa-tree"></i>ABOUT</a></li>
+        <li class="Nav-Link"><a  href="{{url_for('.Home', _anchor='section3')}}"><i style="padding-right:10px;" class="fa fa-list-ul"></i>SERVICES</a></li>
+        <li class="Nav-Link"><a  href="{{url_for('.Home', _anchor='section6')}}"><i style="padding-right:10px;" class="fa fa-leaf"></i>NEWS</a></li>
+        <li class="Nav-Link"><a  href="{{url_for('.Home', _anchor='section8')}}"><i style="padding-right:10px;" class="fa fa-phone"></i>CONTACT</a></li>
+        </div>
+    </ul>
+    <h1>OUR MOTIVE</h1>
+    <div class="slogan">
+    <h2>KEEP AN</h2>
+    <h2>EYE ON FORESTS</h2>
+    </div>
+    <div class="Quote">
+    <h3>"We believe in protecting everything that is around us because in the end Nature is all that we have and all that we will ever need"</h3>
+    </div>
+    <a href="{{url_for('.Home', _anchor='section2')}}" class="scroll-down"><i class="fa fa-angle-down fa-2x"></i></a> 
+</div>  
+</div>
+</section>
+
+<section id="section2">
+<div class="Section-2" > 
+    <div class="Aboutimgs reveal fade-left">
+    <img class="image1" src="https://www.goodfreephotos.com/albums/united-states/wyoming/yellowstone-national-park/forest-fire-yellowstone-national-park-wyoming.jpg" height="420px" width="350px">
+    <img class="image2" src="https://i.pinimg.com/originals/1f/c8/3b/1fc83baf9112734ff48e57990d3c065b.jpg" height="250px" width="320px">
+    </div> 
+
+    <div class="AboutTrans reveal fade-right">
+    <div class="AboutDetails">
+    <h1>ABOUT FIRE EYE</h1>
+    <img src="https://static.vecteezy.com/system/resources/previews/011/318/893/original/green-leaf-branch-watercolor-free-png.png" height="100px" width="85px">
+    <p>
+        The dry period from the end of April until the advent of the monsoon in July is "fire season" 
+        in Pakistan’s forests, which cover the Hindu Kush Himalayas in the country’s north. In these 
+        days, a tiny spark can turn into an out-of-control wildfire raging across forested regions of 
+        Punjab, Kashmir, Khyber Pakhtunkhwa, and Balochistan for days. Besides causing a number of 
+        casualties, the fires killed trees, which consume centuries-old trees, destroy precious 
+        habitats, and kill wildlife. They could also have exacerbated recent flash flooding in some 
+        regions. The destruction of medicinal plants, beehives, and the nut-bearing Chilgoza pine, 
+        in particular, affects local livelihoods to a great extent. Fire Eye is now here to keep an eye 
+        on those flames in check. It detects even trace amounts of fire gases and sounds the alarm before
+        the fire can spread. This buys firefighters valuable time so they can respond that much sooner 
+        to put out the blaze. 
+    </p>
+    </div>
+    
+    <div class="AboutTable">
+    <table>
+        <tr>
+            <td><img src="https://cdn-icons-png.flaticon.com/512/6890/6890840.png" height="60px" width="60px"></td>
+            <td style="padding-left: 15px; padding-right: 25px;">Fighting through climate change </td>
+            <td><img src="https://cdn-icons-png.flaticon.com/512/5077/5077683.png" height="50px" width="50px"></td>
+            <td style="padding-left: 15px;">Preserving Nature and its Resources </td>
+        </tr>
+    </table>
+    </div>
+    <div class="AboutButton">
+        <nav>
+            <ul>
+              <li>
+                <a  href="{{url_for('View.About')}}">READ MORE
+                <span></span><span></span><span></span><span></span></a>
+              </li>
+            </ul>
+        </nav>
+    </div>
+    </div>
+</div>
+</section>
+
+<section>
+    <div class="Section-3"> 
+        <div class="ServicesTitle reveal fade-top"  id="section3">
+            <h1>WHAT WE DO</h1>
+            <h2>SERVICES WE OFFER</h2>
+            <img src="https://static.vecteezy.com/system/resources/previews/011/318/893/original/green-leaf-branch-watercolor-free-png.png" height="100px" width="85px">
+        </div>
+
+        <div class="Services Service-1 reveal fade-bottom">
+            <img src="https://cdn-icons-png.flaticon.com/512/5433/5433237.png" height="253px" width="230px"> 
+            <div class="ServiceLinks">
+                <a style="text-decoration: none; color: black;" href="{{url_for('View.LiveMonitor')}}"><span class="dot"><i style="margin-left: 30%; margin-top: 14.8%;" class="fa fa-angle-right fa-2x"></i></span></a>
+            </div> 
+            <div class="ServiceDetails  Service-1">
+             <h1>Live Monitoring</h1>
+            </div>
+        </div>
+
+        <div class="Services Service-2 reveal fade-bottom">
+            <img src="https://cdn-icons-png.flaticon.com/512/2456/2456309.png" height="253px" width="235px">
+            <div class="ServiceLinks">
+                <a style="text-decoration: none; color: black;" href="{{url_for('View.Location')}}"><span class="dot"><i style="margin-left: 30%; margin-top: 14.8%;" class="fa fa-angle-right fa-2x"></i></span></a>
+            </div>
+            <div class="ServiceDetails  Service-2">
+                <h1>Location Tracker</h1>
+            </div>
+        </div>
+
+        <div class="Services Service-3 reveal fade-bottom">
+            <img src="https://cdn-icons-png.flaticon.com/512/8028/8028212.png" height="230px" width="230px">
+            <div class="ServiceLinks">
+                <a style="text-decoration: none; color: black;" href="{{url_for('View.FireAlerts')}}"><span class="dot"><i style="margin-left: 30%; margin-top: 14.8%;" class="fa fa-angle-right fa-2x"></i></span></a>
+            </div>
+            <div class="ServiceDetails  Service-3">
+                <h1>FireAlert Reports</h1>
+            </div>
+        </div>
+
+        <div class="Services Service-4 reveal fade-bottom">
+            <div class="ServiceLinks">
+                <a style="text-decoration: none; color: black;" href="{{url_for('View.Prediction')}}"><span class="dot"><i style="margin-left: 30%; margin-top: 14.8%;" class="fa fa-angle-right fa-2x"></i></span></a>
+            </div>
+            <img src="https://cdn-icons-png.flaticon.com/512/5464/5464690.png" height="253px" width="230px">
+            <div class="ServiceDetails  Service-4">
+                <h1>Model Prediction</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="Section-4">       
+        <div class="ChooseDetails reveal fade-top">
+            <h1>WHY CHOOSE US</h1>
+            <img src="https://static.vecteezy.com/system/resources/previews/011/318/893/original/green-leaf-branch-watercolor-free-png.png" height="100px" width="85px">
+            <p>In Pakistan, the peak fire season usually begins in late January and lasts around 22 weeks. The following 
+               statistics from recent years forest fires in Pakistan, including regions with the most fire alerts, 
+               explain why we need Fire Eye for forest protection in Pakistan.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="Section-5">  
+        
+        <div class="Statistic-Title">
+            <h1>HISTORICAL FIRE ALERTS IN PAKISTAN</h1>
+        </div>
+        <div class="Statistic reveal fade-top">
+            <div class="counter-count">
+                <span class="count count-number">15,207</span>
+                <h1>Jan 2022 - Dec 2022</h1>
+            </div>
+            <div class="counter-count">
+                <span class="count count-number">10,191</span>
+                <h1>Jan 2021 - Jan 2022</h1>
+            </div>
+            <div class="counter-count">
+                <span class="count count-number">12,156</span>
+                <h1>Jan 2020 - Jan 2021</h1>
+            </div>
+            <div class="counter-count">
+                <span class="count count-number">13,278</span>
+                <h1>Jan 2019 - Jan 2020</h1>
+            </div>
+        </div>
+
+        <div class="Statistic-Title2">
+            <h1>TREE COVER LOSS DUE TO FIRE IN PAKISTAN</h1>
+        </div>
+        <div class="Statistic-Para reveal fade-left">
+            <p>Pakistan has <b>4.2 million ha</b> of forest and planted trees, which equates to <b>4.8 percent</b> of the total land area.
+               <b>From 2001 to 2021</b>, Pakistan lost <b>5.46kha</b> of tree cover from fires and <b>4.29kha</b> from all other causes of loss. 
+               The year with the most tree cover loss due to fires was 2006 with <b>853ha</b> lost to fires — <b>63%</b> of all tree cover loss 
+               for that year. Among regions of Pakistan, <b>F.A.T.A.</b> had the highest rate of tree cover loss due to fires with an average of 
+               <b>189ha</b> lost per year between 2001 to 2021 year period.</p>
+        </div>
+
+        <div class="Statistic2 reveal fade-right" >
+            <div class="counter-count2">
+                <span class="count count-number">189</span>
+                <i style="position: absolute; color: white; margin-left: 19.5%; margin-top: 23%; font-size: larger;">ha</i>
+                <h1 style="margin-left: 25px;">F.A.T.A</h1>
+            </div>
+            <div class="counter-count2">
+                <span class="count count-number">79</span>
+                <i style="position: absolute; color: white; margin-left: 19.5%; margin-top: 23%; font-size: larger;">ha</i>
+                <h1 style="margin-left: 25px;">N.W.F.P</h1>
+            </div>
+            <div class="counter-count2">
+                <span class="count count-number">6</span>
+                <i style="position: absolute; color: white; margin-left: 19.5%; margin-top: 23%; font-size: larger;">ha</i>
+                <h1 style="width: 190px;">Azad Kashmir</h1>
+            </div>
+            <div class="counter-count2">
+                <span class="count count-number">5</span>
+                <i style="position: absolute; color: white; margin-left: 19.5%; margin-top: 23%; font-size: larger;">ha</i>
+                <h1 style="width: 190px;">Northern Area</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="Section-6">
+        <div class="ServicesTitle reveal fade-top" id="section6">
+            <h1 style="color: rgb(0, 58, 0);">WHAT'S GOING ON</h1>
+            <h2 style="margin-left: 33.5%;">LATEST NEWS & BLOGS</h2>
+            <img src="https://static.vecteezy.com/system/resources/previews/011/318/893/original/green-leaf-branch-watercolor-free-png.png" height="100px" width="85px">
+        </div>
+
+        <div class="News News-1 reveal fade-top">
+            <img src="https://i.dawn.com/primary/2022/06/62a5759a6e0dd.jpg" width="350px" height="280px">
+            <div class="NewsHeading  News-1">
+                <p>June 12, 2022 / By Mohammad Ashfaq</p>
+                <a href="https://www.dawn.com/news/1694391">KP wildfires damage forests, pastures over 14,440 acres in fortnight</a>
+            </div>
+        </div>
+
+        <div class="News News-2 reveal fade-top">
+            <img src="https://i.dawn.com/primary/2022/05/6293c847aacb3.jpg" width="350px" height="280px">
+            <div class="NewsHeading  News-1">
+                <p>June 2, 2022 / By Muzhira Amin</p>
+                <a href="https://www.dawn.com/news/1692119/the-balochistan-forest-fire-engulfed-millions-of-trees-and-the-hopes-of-generations-to-come">The Balochistan forest fire engulfed millions of trees and hopes of generation to come</a>
+            </div>
+        </div>
+
+        <div class="News News-3 reveal fade-top">
+            <img src="https://imagevars.gulfnews.com/2022/06/08/WPK-220608-Margallas-1654703336284_18144012b71_large.jpg" width="345px" height="280px">
+            <div class="NewsHeading  News-1">
+                <p>June 8, 2022 / By Sana Jamal</p>
+                <a href="https://gulfnews.com/world/asia/pakistan/devastating-forest-fires-continue-to-rage-in-pakistan-amid-extreme-heatwave-1.88454394">Devastating forest fires continue to rage in Pakistan amid extreme heatwave</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="Section-7">
+        <div class="ServicesTitle reveal fade-top">
+            <h1>PROTECTING FORESTS</h1>
+            <h2 style="margin-left: 20%;">HOW FIRE EYE HELPS FIGHT FOREST FIRES</h2>
+            <img src="https://static.vecteezy.com/system/resources/previews/011/318/893/original/green-leaf-branch-watercolor-free-png.png" height="100px" width="85px">
+        </div>
+        <div class="Video">
+            <div class="scale-video">
+                <iframe src="/static/FIRE_EYE_DOCUMENTORY.mp4" sandbox="" frameborder="0"  allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="Section-8" id="section8">
+        <img src="/static/toppng.com-forest-png-image-forest-clip-art-black-and-white-2334x761.png" width="100%" height="320px">
+        <div class="overlay">
+            <div class="Column Column-1">
+                <h1 class="footer-h1">FIRE EYE</h1>
+                <p>
+                   System that will analyze the scope of artificial intelligence for early 
+                   detection of fire and sending alerts with images and videos from 
+                   CCTV footage. 
+                </p>
+            </div>
+
+            <div class="Column Column-2">
+                <h1 class="footer-h1">EXPLORE</h1>
+                <p><a href="{{url_for('View.Home')}}">Home</a></p>
+                <p><a href="{{url_for('View.About')}}">About</a></p>
+                <p><a href="{{url_for('.Home', _anchor='section3')}}">Services</a></p>
+                <p><a href="{{url_for('.Home', _anchor='section6')}}">News</a></p>
+            </div>
+
+            <div class="Column Column-3">
+                <h1 class="footer-h1">CONTACT</h1>
+                <p><i class="fa fa-home"></i>&nbspRawalpindi, Punjab, Pakistan</p>
+                <p class="Column-2"><i class="fa fa-envelope-square"></i><a  href="{{url_for('.Home', _anchor='section6')}}">&nbsp&nbspfypforestfire@gmail.com</a></p>
+                <p><i class="fa fa-phone"></i>&nbsp&nbsp0345-7865345</p>
+            </div>
+            <div class="Column Column-4">
+                <h1 class="footer-h1">FOLLOW US</h1>
+                <p style="display: inline-block;"><a style="background-color: #3b5998; padding-left: 17.5px; padding-right: 17.5px;" href="https://www.facebook.com/" role="button"><i class="fa-brands fa-facebook-f"></i></a></p>
+                <p style="display: inline-block;"><a style="background-color: #55acee" href="https://twitter.com/" role="button"><i class="fa-brands fa-twitter"></i></a></p>
+                <p style="display: inline-block;"><a style="background-color: #dd4b39" href="{{url_for('View.Home')}}" role="button"><i class="fa-brands fa-google"></i></a></p><br>
+                <p style="display: inline-block;"><a style="background-color: #ac2bac" href="https://www.instagram.com/?hl=en" role="button"><i class="fa-brands fa-instagram"></i></a></p>
+                <p style="display: inline-block;"><a style="background-color: #0082ca; padding-left: 16px; padding-right: 16px;" href="https://www.linkedin.com/" role="button"><i class="fa-brands fa-linkedin"></i></a></p>
+                <p style="display: inline-block;"><a style="background-color: #333333" href="https://github.com/" role="button"><i class="fa-brands fa-github"></i></a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
+
+<script>
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 50;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } 
+  }
+}
+
+window.addEventListener("scroll", reveal);
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/jquery.counterup@2.1.0/jquery.counterup.js"></script>
+<script>
+    $('.count-number').counterUp({
+        delay: 10,
+        time: 10000
+    });
+</script>
+

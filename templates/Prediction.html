@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Elsie&family=Fjalla+One&family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="{{url_for('static', filename='Fire_logo_title.jpg')}}" type="image/jpg" sizes="128x128">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/Prediction.css')}}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Fire Eye - Model Prediction</title>
+</head>
+<body>
+
+  <section>
+    <div class="Section-1">
+        <div class="Nav-Bar">
+        <ul class="Navigation-Bar">
+            <a class="title" href="{{url_for('View.Home')}}"><img class="logo" src="{{url_for('static', filename='Fire_Logo.png')}}" width="100px" height="100px"></a>
+            <a class="topnav-left" href="{{url_for('View.Home')}}">Fire Eye</a>
+        <div class="topnav-right">
+            <li class="Nav-Link"><a  href="{{url_for('View.Home')}}"><i style="padding-right:10px;" class="fa fa-home"></i>HOME</a></li>
+            <li class="Nav-Link"><a  href="{{url_for('View.About')}}"><i style="padding-right:10px;" class="fa fa-tree"></i>ABOUT</a></li>
+            <li class="Nav-Link"><a  href="{{url_for('View.Home', _anchor='section3')}}"><i style="padding-right:10px;" class="fa fa-list-ul"></i>SERVICES</a></li>
+            <li class="Nav-Link"><a  href="{{url_for('View.Home', _anchor='section6')}}"><i style="padding-right:10px;" class="fa fa-leaf"></i>NEWS</a></li>
+            <li class="Nav-Link"><a  href="{{url_for('.Prediction', _anchor='section3')}}"><i style="padding-right:10px;" class="fa fa-phone"></i>CONTACT</a></li>
+        </div>
+        </ul>
+        </div>
+  
+        <div class="Content">
+        <div class="image-overlay">
+            <div class="image">
+            </div>
+        </div>
+        <div class="Content-text">
+        <h1>MODEL PREDICTION</h1>
+        <a href="{{url_for('View.Home')}}">Home&nbsp&nbsp&nbsp&nbsp<i class="fa fa-angle-right"></i></a>
+        <p>&nbsp&nbsp&nbsp&nbspModel Prediction</p>
+        </div>
+        </div>
+    </div>
+</section>   
+
+<section>
+  <div class="Section-2" >
+      <div class="PredictTitle">
+      <img src="https://static.vecteezy.com/system/resources/previews/011/318/893/original/green-leaf-branch-watercolor-free-png.png" height="100px" width="100px">
+      <h1>FIRE AND NON FIRE MODEL PREDICTION</h1>
+      </div>
+
+  <div class="PredictForm">
+  <form class="form-horizontal" action="{{url_for('View.get_output', _anchor='section2')}}" method="post" enctype="multipart/form-data">
+    <div>
+      <label id="Up_Hd" for="pwd">Upload Image For Prediction:</label>
+      <div>          
+        <br>
+        <input type="file" class="form-control" placeholder="Hours Studied"  name="my_image" id="pwd">    
+       </div>
+    </div>
+
+    <div>        
+      <div class="Btn">
+        <br>
+        <button type="submit" class="btn btn-success">SUBMIT</button>
+      </div>
+    </div>
+  </form>
+</div>
+  
+  <div class="Predicted_Data" id="section2"> 
+  {% if prediction %}
+    <div class="column" style="border-right: none; ">
+      <br><br>
+      <img src="{{img_path}}" height="400px" width="400px" >
+    </div>
+    <div class="column" style="border-left: none;">
+      <h1 style="margin-top:48.5%; margin-left: 3%; font-family: 'EB Garamond', serif;  color: rgb(112, 24, 4);">Prediction = {{prediction}} Detected</h1>
+    </div>
+	{% endif %}
+   </div>
+</div>
+</section>
+
+<section>
+<div class="Section-3" id="section3">
+      <img src="/static/toppng.com-forest-png-image-forest-clip-art-black-and-white-2334x761.png" width="100%" height="320px">
+      <div class="overlay">
+          <div class="Column Column-1">
+              <h1 class="footer-h1">FIRE EYE</h1>
+              <p>
+                 System that will analyze the scope of artificial intelligence for early 
+                 detection of fire and sending alerts with images and videos from 
+                 CCTV footage. 
+              </p>
+          </div>
+
+          <div class="Column Column-2">
+              <h1 class="footer-h1">EXPLORE</h1>
+              <p><a href="{{url_for('View.Home')}}">Home</a></p>
+              <p><a href="{{url_for('View.About')}}">About</a></p>
+              <p><a href="{{url_for('.Home', _anchor='section3')}}">Services</a></p>
+              <p><a href="{{url_for('.Home', _anchor='section6')}}">News</a></p>
+          </div>
+
+          <div class="Column Column-3">
+              <h1 class="footer-h1">CONTACT</h1>
+              <p><i class="fa fa-home"></i>&nbspRawalpindi, Punjab, Pakistan</p>
+              <p class="Column-2"><i class="fa fa-envelope-square"></i><a  href="{{url_for('.Home', _anchor='section6')}}">&nbsp&nbspfypforestfire@gmail.com</a></p>
+              <p><i class="fa fa-phone"></i>&nbsp&nbsp0345-7865345</p>
+          </div>
+          <div class="Column Column-4">
+            <h1 class="footer-h1">FOLLOW US</h1>
+            <p style="display: inline-block;"><a style="background-color: #3b5998; padding-left: 17.5px; padding-right: 17.5px;" href="https://www.facebook.com/" role="button"><i class="fa-brands fa-facebook-f"></i></a></p>
+            <p style="display: inline-block;"><a style="background-color: #55acee" href="https://twitter.com/" role="button"><i class="fa-brands fa-twitter"></i></a></p>
+            <p style="display: inline-block;"><a style="background-color: #dd4b39" href="{{url_for('View.Home')}}" role="button"><i class="fa-brands fa-google"></i></a></p><br>
+            <p style="display: inline-block;"><a style="background-color: #ac2bac" href="https://www.instagram.com/?hl=en" role="button"><i class="fa-brands fa-instagram"></i></a></p>
+            <p style="display: inline-block;"><a style="background-color: #0082ca; padding-left: 16px; padding-right: 16px;" href="https://www.linkedin.com/" role="button"><i class="fa-brands fa-linkedin"></i></a></p>
+            <p style="display: inline-block;"><a style="background-color: #333333" href="https://github.com/" role="button"><i class="fa-brands fa-github"></i></a></p>
+        </div>
+      </div>
+</div>
+</section>
+
+</body>
+</html>
+
+
+
+
+
+
+

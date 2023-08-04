@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Elsie&family=Fjalla+One&family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/LiveMonitor.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="{{url_for('static', filename='Fire_logo_title.jpg')}}" type="image/jpg" sizes="128x128">
+    <title>Fire Eye - Live Monitor</title>
+</head>
+
+<body>
+<section>
+    <div class="Section-1">
+        <div class="Nav-Bar">
+        <ul class="Navigation-Bar">
+            <a class="title" href="{{url_for('View.Home')}}"><img class="logo" src="{{url_for('static', filename='Fire_Logo.png')}}" width="100px" height="100px"></a>
+            <a class="topnav-left" href="{{url_for('View.Home')}}">Fire Eye</a>
+        <div class="topnav-right">
+            <li class="Nav-Link"><a  href="{{url_for('View.Home')}}"><i style="padding-right:10px;" class="fa fa-home"></i>HOME</a></li>
+            <li class="Nav-Link"><a  href="{{url_for('View.About')}}"><i style="padding-right:10px;" class="fa fa-tree"></i>ABOUT</a></li>
+            <li class="Nav-Link"><a  href="{{url_for('View.Home', _anchor='section3')}}"><i style="padding-right:10px;" class="fa fa-list-ul"></i>SERVICES</a></li>
+            <li class="Nav-Link"><a  href="{{url_for('View.Home', _anchor='section6')}}"><i style="padding-right:10px;" class="fa fa-leaf"></i>NEWS</a></li>
+            <li class="Nav-Link"><a  href="{{url_for('.LiveMonitor', _anchor='section4')}}"><i style="padding-right:10px;" class="fa fa-phone"></i>CONTACT</a></li>
+        </div>
+        </ul>
+        </div>
+  
+        <div class="Content">
+        <div class="image-overlay">
+            <div class="image">
+            </div>
+        </div>
+        <div class="Content-text">
+        <h1>LIVE MONITORING</h1>
+        <a href="{{url_for('View.Home')}}">Home&nbsp&nbsp&nbsp&nbsp<i class="fa fa-angle-right"></i></a>
+        <p>&nbsp&nbsp&nbsp&nbspLive Monitoring</p>
+        </div>
+        </div>
+    </div>
+</section>   
+
+<section>
+    <div class="Section-2" >
+        <div class="LiveTitle">
+        <img src="https://static.vecteezy.com/system/resources/previews/011/318/893/original/green-leaf-branch-watercolor-free-png.png" height="100px" width="100px">
+        <h1>FOREST FIRE LIVE WATCH</h1>
+        </div>
+    
+    <div class="LiveForm" id="section2">
+    <form method="post" action="{{url_for('View.tasks', _anchor='section2')}}" >
+        <div style="position: absolute; margin-left: 25.7%; margin-top: 1.5%; color: rgb(255,251,233);"><i class="fa fa-play"></i> <i class="fa fa-pause"></i></div>
+        <input type="submit" value="MONITOR" name="stop" style="margin-left: 23%; padding-left: 70px;"/>
+        <div style="position: absolute; margin-left: 45.6%; margin-top: -3%; color: rgb(255,251,233);"><i class="fa fa-photo-film"></i></div>
+        <input type="submit" value="NEGATIVE" name="neg" style="padding-left: 65px;"/>
+        <div style="position: absolute; margin-left: 65%; margin-top: -3%; color: rgb(255,251,233);"><i class="fa fa-video"></i></div>
+        <input type="submit" value="RECORD" name="rec" style="padding-left: 62px;"/>
+    </form>
+    </div>
+
+    <div class="videofeed">
+    <p><i class="fa fa-arrow-right-long"></i>&nbsp&nbspSTART STREAMING</p>
+    <img src="{{url_for('View.video_feed') }}" width="925px"height="520px">
+    </div>
+    </div>
+</section>
+
+<section>
+    <div class="Section-3">
+            <div class="LiveTitle" style="margin-left: -20%; margin-top: 2%;">
+                <img src="https://static.vecteezy.com/system/resources/previews/011/318/893/original/green-leaf-branch-watercolor-free-png.png" height="100px" width="100px">
+                <h1>GUIDELINES</h1>
+            </div>
+
+            <div class="guidelines">
+            <ol type="I">
+            <li>&nbsp&nbspMonitor - Toggle between Start / Stop live monitoring</li>
+            <li>&nbsp&nbspNegative - Toggle between Negative and RGB output</li>
+            <li>&nbsp&nbspRecord - Toggle between Start / Stop video recording</li> 
+            </ol>	
+            </div>
+    </div>
+</section>
+
+<section>
+    <div class="Section-4" id="section4">
+        <img src="/static/toppng.com-forest-png-image-forest-clip-art-black-and-white-2334x761.png" width="100%" height="320px">
+        <div class="overlay">
+            <div class="Column Column-1">
+                <h1 class="footer-h1">FIRE EYE</h1>
+                <p>
+                   System that will analyze the scope of artificial intelligence for early 
+                   detection of fire and sending alerts with images and videos from 
+                   CCTV footage. 
+                </p>
+            </div>
+
+            <div class="Column Column-2">
+                <h1 class="footer-h1">EXPLORE</h1>
+                <p><a href="{{url_for('View.Home')}}">Home</a></p>
+                <p><a href="{{url_for('View.About')}}">About</a></p>
+                <p><a href="{{url_for('.Home', _anchor='section3')}}">Services</a></p>
+                <p><a href="{{url_for('.Home', _anchor='section6')}}">News</a></p>
+            </div>
+
+            <div class="Column Column-3">
+                <h1 class="footer-h1">CONTACT</h1>
+                <p><i class="fa fa-home"></i>&nbspRawalpindi, Punjab, Pakistan</p>
+                <p class="Column-2"><i class="fa fa-envelope-square"></i><a  href="{{url_for('.Home', _anchor='section6')}}">&nbsp&nbspfypforestfire@gmail.com</a></p>
+                <p><i class="fa fa-phone"></i>&nbsp&nbsp0345-7865345</p>
+            </div>
+            <div class="Column Column-4">
+                <h1 class="footer-h1">FOLLOW US</h1>
+                <p style="display: inline-block;"><a style="background-color: #3b5998; padding-left: 17.5px; padding-right: 17.5px;" href="https://www.facebook.com/" role="button"><i class="fa-brands fa-facebook-f"></i></a></p>
+                <p style="display: inline-block;"><a style="background-color: #55acee" href="https://twitter.com/" role="button"><i class="fa-brands fa-twitter"></i></a></p>
+                <p style="display: inline-block;"><a style="background-color: #dd4b39" href="{{url_for('View.Home')}}" role="button"><i class="fa-brands fa-google"></i></a></p><br>
+                <p style="display: inline-block;"><a style="background-color: #ac2bac" href="https://www.instagram.com/?hl=en" role="button"><i class="fa-brands fa-instagram"></i></a></p>
+                <p style="display: inline-block;"><a style="background-color: #0082ca; padding-left: 16px; padding-right: 16px;" href="https://www.linkedin.com/" role="button"><i class="fa-brands fa-linkedin"></i></a></p>
+                <p style="display: inline-block;"><a style="background-color: #333333" href="https://github.com/" role="button"><i class="fa-brands fa-github"></i></a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>  
+

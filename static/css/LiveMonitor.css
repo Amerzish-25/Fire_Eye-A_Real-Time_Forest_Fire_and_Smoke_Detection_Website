@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Elsie&family=Fjalla+One&family=Source+Serif+Pro:wght@300&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+title{
+    font-family: 'Elsie',cursive;
+}
+
+body{
+    margin: 0px auto 0px auto;
+    max-width: 1150px;  
+    min-width: 1140px;
+}
+
+.Section-1{  
+    position: relative;
+    height: 524px;
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+    background-color: rgb(255, 251, 233);
+}
+
+/*Navigation Bar*/
+.Nav-Bar{
+    background-color: rgb(255, 251, 233);
+    padding-bottom: 22px;
+}
+
+.logo{
+    position: absolute;
+    margin-left: 5%;
+}
+  
+.topnav-right{
+    float:right;
+    margin-top: 2.5%;
+    margin-right: 2%;
+}
+  
+a.topnav-left {
+    position: absolute;
+    left: 12.5%;
+    top: 6%;
+    font-family: 'Elsie', cursive;
+    font-size: 30px;
+    text-decoration: none;
+    color: rgb(112, 24, 4);
+}
+  
+.Navigation-Bar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+  
+.Navigation-Bar li {
+    float: left;
+}
+    
+.Navigation-Bar li a {
+    display: block;
+    font-family: 'Source Serif Pro', serif;
+    text-align: center;
+    color: rgb(112, 24, 4);
+    padding: 9px 16px;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+  
+.Navigation-Bar li:hover{
+    background-color:  rgb(112, 24, 4);
+    border-radius: 5px;
+}
+  
+.Navigation-Bar li:hover a{
+    color: rgb(255, 251, 233);
+}
+
+.Content{
+    position: relative;
+    display: inline-block;
+    height: 400px;
+    width: 100%;
+}
+
+.Content-text{
+    position: absolute;
+    top: 55%;
+    left: 24%;
+    transform: translate(-28%, -50%);
+}
+
+.Content-text h1{
+    font-family: 'Elsie', cursive;
+    color: rgb(255, 166, 0);
+    font-size: 85px;
+    font-weight: lighter;
+    margin-top: 1%;
+    margin-bottom: 0%;
+}
+
+.Content-text a{
+    text-decoration: none;
+    font-family: 'Source Serif Pro', serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color:rgb(253, 253, 253);
+    float: left;
+}
+
+.Content-text p{
+    font-family: 'Source Serif Pro', serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color:rgb(253, 253, 253);
+    margin-top: 0px;
+}
+
+.image-overlay{
+    background: url('/static/tuxpi.com.1681837124.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 380px;
+    position: relative;
+}
+
+.image{
+    position: absolute;
+    width: 100%;
+    background: rgb(0,0,0,0.4);
+    height: 369px;
+  }
+
+.Section-2{
+    display: inline-block;
+    position: relative;
+    background-color: rgb(255, 251, 233);
+    background-size: 100% 110%;
+    height: 800px;
+    width: 100%;
+}
+
+.LiveTitle h1{
+    font-family: 'EB Garamond', serif;
+    color:   rgb(112, 24, 4);
+    font-size: 35px;
+    position: absolute;
+    margin-left: 35.2%; 
+}
+  
+.LiveTitle img{
+    transform: rotate(70deg);
+    position: absolute;
+    margin-left: 26.5%;
+    margin-top: 0.6%;
+}
+
+.LiveForm{
+    position: absolute;
+    margin-top: 11%;
+    width: 1145px;
+}
+
+input[type=submit]{
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: rgb(112, 24, 4);
+    color: rgb(255, 251, 233);
+    padding: 10px 30px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 50px;
+    border: solid 3px rgb(112, 24, 4);
+    box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+    margin-left: 20px;
+}
+
+input[type=submit]:hover{
+    border: solid 3px rgb(151, 190, 50);
+    box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+    background-color: rgb(151, 190, 50);
+}
+
+
+.videofeed{
+    position: absolute;
+    margin-top: 18%;  
+    margin-left: 10%; 
+}
+
+.videofeed p{
+    position: absolute;
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(112, 24, 4);
+    width: 300px;
+    margin-left: 360px;
+    margin-top: 250px;
+}
+
+.videofeed img{
+    border-radius: 2px;
+    border: solid 3px rgb(112, 24, 4);
+    box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+    z-index: 9;
+    position: absolute;
+}
+
+
+.Section-3{  
+    display: inline-block;
+    position: relative;
+    background-color: #ecf3c6;
+    height: 280px;
+    width: 100%;
+    margin-top: -5px;
+}
+
+.guidelines{
+    position: absolute;
+    margin-top: 7.5%;
+    margin-left: 6%;
+}
+
+.guidelines li{
+    font-family: 'EB Garamond', serif;
+    font-size: 26px; 
+    font-style: oblique;
+}
+
+/*Section 4 Footer*/
+.Section-4{
+    display: inline-block;
+    position: relative;
+    background-color: rgb(112, 24, 4);
+    height: 320px;
+    width: 100%;
+    margin-top: -5px;
+  }
+  
+  .Section-4 img{
+    position: absolute;
+    margin-top: 1%;
+  }
+  
+  .overlay{
+    background: rgba(0, 0, 0, 0.3);
+    height: 320px; 
+  }
+  
+  .Column{
+    height: 60%;
+    width: 35%;
+    margin-top: 4.5%;
+    margin-left: 4%;
+    display: inline-block;
+    position: absolute;
+    z-index: 9;
+  }
+  .Column.Column-2{
+    width: 14%;
+    margin-left: 40.5%;
+  }
+  .Column.Column-3{
+    width: 21%;
+    margin-left: 56%;
+  }
+  .Column.Column-4{
+    width: 17%;
+    margin-left: 78.5%;
+    margin-right: 4%;
+  }
+  
+  .footer-h1{
+    margin-top: 0;
+    font-size: 30px;
+    font-family: 'EB Garamond', serif;
+    color: rgb(255, 251, 233);
+  }
+  
+  .Column-1 p{
+    font-family: 'EB Garamond', serif;
+    color: rgb(255, 251, 233);
+    font-size: 18px;
+    text-align: justify;
+    margin-right: 5%;
+  }
+  
+  .Column-2 a{
+    text-decoration: none;
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+    color: rgb(255, 251, 233);
+    margin-top: 4%;
+  }
+  
+  .Column-2 a:hover{
+    text-shadow: 1px 1px 2px white;
+  }
+  
+  .Column-2 p{
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  
+  .Column-3 p{
+    color: rgb(255, 251, 233);
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+  }
+  
+  .Column-4{
+    text-align: center;
+  }
+  
+  .Column-4 a{
+    text-decoration: none;
+    font-family: 'EB Garamond', serif;
+    color: white; 
+    padding: 16px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border-radius: 100%;
+  }
+  

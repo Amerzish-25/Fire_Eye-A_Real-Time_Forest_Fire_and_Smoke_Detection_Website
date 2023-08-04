@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Elsie&family=Fjalla+One&family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/ModelTesting.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="{{url_for('static', filename='Fire_logo_title.jpg')}}" type="image/jpg" sizes="128x128">
+    <title>Fire Eye - Model Testing</title>
+</head>
+<body>
+<section>
+    <div class="Nav-Bar">
+        <div class="image-overlay">
+            <ul class="Navigation-Bar">
+                <a class="title" href="{{url_for('View.Home')}}"><img class="logo" src="{{url_for('static', filename='logo.png')}}" width="90px" height="100px"></a>
+                <a class="topnav" href="{{url_for('View.Home')}}">Fire Eye</a>
+            <div class="bottomnav">
+                <button class="dropbtn" onclick="myFunction()"><i style="padding-right:12px;" class="fa fa-desktop"></i>Dashboard&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content" id="myDropdown">
+                <li><a  href="{{url_for('View.FireAlerts')}}"><i style="padding-right:16px; " class="fa fa-fire"></i>Fire Alerts</a></li>
+                <li style="background-color: rgb(0,0,0, 0.75);  border: solid 1px rgb(255,251,233);"><a  href="{{url_for('View.ModelTesting')}}"><i style="padding-right:10px;" class="fa fa-line-chart"></i>Model Testing</a></li>
+                <li><a  href="{{url_for('View.Home')}}" style="padding-right:30px;"><i style="padding-right:16px;" class="fa fa-arrow-left"></i>Back</a></li>
+                </div>
+            </div>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div class="Section-1">
+        <div class="dash-title">
+            <div class="image-overlay2">
+            <img src="/static/neural.png" width="50px" height="50px">
+            <h1>MODEL TESTING</h1>
+            </div>
+        </div>
+        
+    <!-- EVULATION PARAMETERS -->
+
+    <div class="Eval-Param" style="background-color: #000709   ">
+            <div class="counter-count">
+                <span class="count count-number">98</span><span class= "percent">%</span>
+                <h1>ACCURACY</h1>
+            </div>
+    </div>
+    
+    <div class="Eval-Param" style="background-color: #5c6b28">
+            <div class="counter-count">
+                <span class="count count-number">98</span><span class= "percent">%</span>
+                <h1>PRECISION</h1>
+            </div>
+    </div>
+
+    <div class="Eval-Param" style="background-color: #d7da5e">
+            <div class="counter-count">
+                <span class="count count-number">98</span><span class= "percent">%</span>
+                <h1>RECALL</h1>
+            </div>
+    </div>
+
+    <div class="Eval-Param" style="background-color: rgb(235, 156, 10);">
+            <div class="counter-count count-1">
+                <span class="count count-number">98</span><span class= "percent">%</span>
+                <h1>F1 SCORE</h1>
+            </div>
+    </div>
+
+     <!-- MODEL ACCURACY CURVE --> 
+
+    <div class="contp">
+        <div class="param-title">
+            <img src="https://static.vecteezy.com/system/resources/previews/011/318/893/original/green-leaf-branch-watercolor-free-png.png" height="100px" width="85px">
+            <h1>MODEL ACCURACY CURVE</h1>
+        </div>
+    </div>
+        
+    <div class="acc-loss-graph">
+        <img src="{{ acc_plot_url }}" alt="Accuracy Plot">
+    </div>
+
+     <!-- MODEL LOSS CURVE -->
+
+    <div class="contp">
+        <div class="param-title">
+            <img src="https://static.vecteezy.com/system/resources/previews/011/318/893/original/green-leaf-branch-watercolor-free-png.png" height="100px" width="85px">
+            <h1>MODEL LOSS CURVE</h1>
+        </div>
+    </div>
+        
+    <div class="acc-loss-graph">
+        <img src="{{ loss_plot_url }}" alt="Loss Plot">
+    </div>
+   
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    
+    <!-- CONFUSION MATRIX AND ROC GRAPH TRAIN -->
+    <div class="contp">
+        <div class="param-title">
+            <img src="https://static.vecteezy.com/system/resources/previews/011/318/893/original/green-leaf-branch-watercolor-free-png.png" height="100px" width="85px">
+            <h1>MODEL PREDICTION VISUALIZATION</h1>
+            <h2><i class="fa fa-arrow-right-long"></i>&nbsp&nbspON TRAINING SET:</h2>
+        </div>
+    </div>
+    
+    <div class="test-graph">
+        <img class="myImg" src="/static/graphs/confusion_matrix_train.png" alt="Confusion matrix Train" width="100%">
+    </div>
+
+    <div class="test-graph">
+        <img class="myImg" src="/static/graphs/ROC_curve-train.png" alt="ROC Curve Train" width="100%" style="margin-left: 1.9%;">
+    </div>
+    
+    <!-- CONFUSION MATRIX AND ROC GRAPH VAL -->
+
+    <div class="contp">
+        <div class="param-title">
+            <h2 style="margin-top: 3.5%;"><i class="fa fa-arrow-right-long"></i>&nbsp&nbspON VALIDATION SET:</h2>
+        </div>
+    </div>
+
+    <div class="test-graph">
+        <img class="myImg" src="/static/graphs/confusion_matrix_val.png" alt="Confusion matrix Val" width="100%" style="margin-top: 12%;">
+    </div>
+
+    <div class="test-graph">
+        <img class="myImg" src="/static/graphs/ROC_curve-val.png" alt="ROC Curve Val" width="100%" style="margin-left: 1.9%; margin-top: 12%;">
+    </div>
+
+    <!-- CONFUSION MATRIX AND ROC GRAPH TEST -->
+
+    <div class="contp">
+        <div class="param-title">
+            <h2 style="margin-top: 3.5%;"><i class="fa fa-arrow-right-long"></i>&nbsp&nbspON TESTING SET:</h2>
+        </div>
+    </div>
+
+    <div class="test-graph">
+        <img class="myImg" src="/static/graphs/confusion_matrix_test.png" alt="Confusion matrix Test" width="100%" style="margin-top: 12%;">
+    </div>
+
+    <div class="test-graph">
+        <img class="myImg" src="/static/graphs/ROC_curve-test.png" alt="ROC Curve Test" width="100%" style="margin-left: 1.9%; margin-top: 12%;">
+    </div>
+
+    <!-- INCEPTION MODEL TEST CASES-->
+    <div class="cont"></div>
+    <div class="contp">
+        <div class="param-title">
+            <img src="https://static.vecteezy.com/system/resources/previews/011/318/893/original/green-leaf-branch-watercolor-free-png.png" height="100px" width="85px">
+            <h1>INCEPTION V3 MODEL TEST CASES</h1>
+        </div>
+    </div>
+
+    <!-- TEST CASE 1-->
+
+    <div class="contp">
+        <div class="param-title">
+            <h2 style="margin-top: 10%;"><i class="fa fa-arrow-right-long"></i>&nbsp&nbspFIRE IMAGE TEST-1:</h2>
+        </div>
+    </div>
+
+    <div class="test-graph">
+        <img class="myImg" src="/static/graphs/Fire_test1.jpg" alt="Fire Image Test" width="100%" style="margin-top: 20%;">
+    </div>
+
+     <!-- TEST CASE 2-->
+
+    <div class="contp" style="display: inline-block; position: absolute; width: 350px;">
+        <div class="param-title">
+            <h2 style="margin-top: 32.2%; margin-left: -15%;"><i class="fa fa-arrow-right-long"></i>&nbsp&nbspSMOKE IMAGE TEST-2:</h2>
+        </div>
+    </div>
+
+    <div class="test-graph">
+        <img class="myImg" src="/static/graphs/Smoke_test2.jpg" alt="Smoke Image Test" width="100%" style="margin-top: 20%;">
+    </div>
+
+     <!-- TEST CASE 3-->
+
+    <div class="contp">
+        <div class="param-title">
+            <h2 style="margin-top: 3.5%; margin-left: 20%;"><i class="fa fa-arrow-right-long"></i>&nbsp&nbspNON FIRE IMAGE TEST-3:</h2>
+        </div>
+    </div>
+
+    <div class="test-graph">
+        <img class="myImg" src="/static/graphs/Non_fire_test3.jpg" alt="Fire Image Test" width="100%" style="margin-top: 12%; margin-left: 27%;">
+    </div>
+    
+    <!-- YOLOV5 MODEL TEST CASES-->
+
+    <div class="cont"></div>
+    <div class="contp">
+        <div class="param-title">
+            <img src="https://static.vecteezy.com/system/resources/previews/011/318/893/original/green-leaf-branch-watercolor-free-png.png" height="100px" width="85px">
+            <h1>YOLOV5 MODEL TEST CASES</h1>
+            <h2><i class="fa fa-arrow-right-long"></i>&nbsp&nbspON CONTROLLED FIRE INPUT TEST-1:</h2>
+        </div>
+    </div>
+
+    <div class="yolo_test">
+        <img class="myImg" src="/static/shots/shot_2023-07-09 195248.518345.png" alt="Fire Image Test" width="100%" height="400px">
+    </div>
+
+    <div class="contp">
+        <div class="param-title">
+            <h2 style="margin-top: 3.5%;"><i class="fa fa-arrow-right-long"></i>&nbsp&nbspON FIRE INPUT TEST-2:</h2>
+        </div>
+    </div>
+
+    <div class="yolo_test test2">
+        <img class="myImg" src="/static/shots/shot_2023-07-12 201140.6851088.png" alt="Fire Image Test" width="100%" height="400px">
+    </div>
+
+    <div class="contp">
+        <div class="param-title">
+            <h2 style="margin-top: 3.5%;"><i class="fa fa-arrow-right-long"></i>&nbsp&nbspON VIDEO INPUT:</h2>
+        </div>
+    </div>
+
+    <div class="Video">
+        <div class="scale-video">
+            <iframe width="560" height="315" src="/static/FIRE EYE.mp4" sandbox="" frameborder="0"  allowfullscreen></iframe>
+        </div>
+    </div>
+
+    </div>
+</section>
+</body>
+</html>
+
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    }
+     // <img src={{url}} alt="Chart" height="auto" width="100%">
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/jquery.counterup@2.1.0/jquery.counterup.js"></script>
+<script>
+    $('.count-number').counterUp({
+        delay: 10,
+        time: 1000
+    });
+</script>
+
+<script>
+    // Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementsByClassName('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+var showModal = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+for (var i = 0; i < img.length; i++) {
+    img[i].addEventListener('click', showModal);
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+    </script>
