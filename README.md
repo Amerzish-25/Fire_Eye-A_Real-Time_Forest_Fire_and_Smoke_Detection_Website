@@ -25,4 +25,6 @@ In this project, we propose a system for detecting and monitoring forest fires u
 
 ## INSTALLATION 
 1. Clone the repository:
-2. 
+git clone https://github.com/Amerzish-25/Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website.git
+cd Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website
+
