@@ -8,6 +8,7 @@ https://github.com/Amerzish-25/Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detect
 - [Installation](#installation)
 - [Usage](#usage)
 - [Dataset](#dataset)
+- [Training](#training)
 - [Results](#results)
 - [Contributing](#contributing)
 
@@ -25,6 +26,26 @@ In this project, we propose a system for detecting and monitoring forest fires u
 
 ## INSTALLATION 
 1. Clone the repository:
+```
 git clone https://github.com/Amerzish-25/Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website.git
 cd Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website
+```
+2. Install the required dependencies:
+```
+pip install -r requirements.txt
+```
+## USAGE 
+1. To run Flask Server:
+```
+python App.py
+```
+2. Open your web browser and Navigate to `http://127.0.0.1:5000` to access the application.
+
+## DATASET
+For training the YOLO-v5 and Inception-v3 models, you can find the datasets on Kaggle:
+
+- YOLO V5 Dataset: [Link to YOLO-v5 Dataset on Kaggle](https://www.kaggle.com/datasets/amerzishminha/fire-eye)
+- Inception V3 Dataset: [Link to Inception-v3 Dataset on Kaggle](https://www.kaggle.com/datasets/amerzishminha/forest-fire-smoke-and-non-fire-image-dataset)
+
+Please note that these datasets were used for training the respective models in this project. Ensure that you review the dataset licenses and terms on Kaggle before using them for your own purposes.
 
