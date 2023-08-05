@@ -72,7 +72,8 @@ pip install -r requirements.txt
 3. Preprocess the Dataset using data augmentation
 ```
 training_datagenarator= ImageDataGenerator(rescale=1./255,horizontal_flip=True, vertical_flip=True,
-    shear_range=0.2, zoom_range=0.2,width_shift_range=0.2, height_shift_range=0.2,validation_split=0.1)
+                                          shear_range=0.2, zoom_range=0.2,width_shift_range=0.2,
+                                           height_shift_range=0.2,validation_split=0.1)
 ```
 3. Load the Inception-v3 Model and configure model architecture
 ```
@@ -80,8 +81,8 @@ inceptionV3 = InceptionV3(input_shape=IMG_SIZE + [3], weights='imagenet', includ
 ```
 4. Compile and Train the model
 ```
-history =model.fit_generator(train, validation_data=validation, epochs=50,
-steps_per_epoch=train.samples//BATCH_SIZE, validation_steps=validation.samples//BATCH_SIZE, callbacks = callback)
+history =model.fit_generator(train, validation_data=validation, epochs=50, steps_per_epoch=train.samples//BATCH_SIZE,
+                             validation_steps=validation.samples//BATCH_SIZE, callbacks = callback)
 ```
 5. Save the model for evaluation and prediction
 
