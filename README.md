@@ -1,6 +1,6 @@
 # FIRE EYE 
 
-https://github.com/Amerzish-25/Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website/assets/106583511/1827098d-b95a-447a-8d40-e50d3a37c4e7
+![Interface](https://github.com/Amerzish-25/Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website/assets/106583511/a20e5c92-6049-47f3-8113-bd8cf4fae254)
 
 ## CONTENTS
 - [Introduction](#introduction)
