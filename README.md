@@ -81,7 +81,8 @@ inceptionV3 = InceptionV3(input_shape=IMG_SIZE + [3], weights='imagenet', includ
 ```
 4. Compile and Train the model
 ```
-history =model.fit_generator(train, validation_data=validation, epochs=50, steps_per_epoch=train.samples//BATCH_SIZE,
+history =model.fit_generator(train, validation_data=validation, epochs=50,
+                              steps_per_epoch=train.samples//BATCH_SIZE,
                              validation_steps=validation.samples//BATCH_SIZE, callbacks = callback)
 ```
 5. Save the model for evaluation and prediction
