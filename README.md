@@ -90,3 +90,15 @@ history =model.fit_generator(train, validation_data=validation, epochs=50,
 5. Save the model for evaluation and prediction
 
 ## RESULTS
+![Results](https://github.com/Amerzish-25/Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website/assets/106583511/4c548aea-4477-4631-a059-b94e0917ca1f)
+
+### Yolov5 Results Visualization:
+
+![val_batch0_pred](https://github.com/Amerzish-25/Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website/assets/106583511/f395a8f1-5091-419b-8d3d-3b4005cd05b2)
+![val_batch1_predcopy](https://github.com/Amerzish-25/Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website/assets/106583511/36d8c73d-a592-4b64-8658-feeb714c1630)
+
+### Inception v3 Results Visualization:
+![confusion_matrix_test](https://github.com/Amerzish-25/Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website/assets/106583511/9969f150-3898-4413-8695-af8204fa1d4c)
+
+
+
