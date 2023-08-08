@@ -99,3 +99,4 @@ history =model.fit_generator(train, validation_data=validation, epochs=50,
 ![predicted_images (3copy)](https://github.com/Amerzish-25/Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website/assets/106583511/25fa18ee-f3c9-4107-baa1-b8a8b08c6960)
 
 ## CONCLUSION
+In conclusion, the Fire Eye represents a significant step forward in using technology to enhance forest fire detection and monitoring. As a collaborative and open-source project, we invite contributors from around the world to join us in further refining and expanding the capabilities of Fire Eye. Thank you for exploring our project.
