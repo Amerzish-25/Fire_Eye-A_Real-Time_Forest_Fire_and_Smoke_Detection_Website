@@ -1,8 +1,6 @@
 # FIRE EYE 
+![bandicam 2023-08-08 22-05-41-790](https://github.com/Amerzish-25/Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website/assets/106583511/de4ce1bb-93e5-41e9-b5fe-2cec43e955a4)
 
-<p align="center">
-  <img src="https://github.com/Amerzish-25/Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website/assets/106583511/a20e5c92-6049-47f3-8113-bd8cf4fae254.png" alt="Interface" width="100%">
-</p>
 
 ## CONTENTS
 - [What is Fire Eye?](#what-is-fire-eye)
