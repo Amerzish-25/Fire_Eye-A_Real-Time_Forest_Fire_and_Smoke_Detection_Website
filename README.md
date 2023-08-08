@@ -1,21 +1,19 @@
 # FIRE EYE 
+![bandicam 2023-08-08 22-05-41-790](https://github.com/Amerzish-25/Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website/assets/106583511/de4ce1bb-93e5-41e9-b5fe-2cec43e955a4)
 
-<p align="center">
-  <img src="https://github.com/Amerzish-25/Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website/assets/106583511/a20e5c92-6049-47f3-8113-bd8cf4fae254.png" alt="Interface" width="100%">
-</p>
 
 ## CONTENTS
-- [Introduction](#introduction)
+- [What is Fire Eye?](#what-is-fire-eye)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Dataset](#dataset)
 - [Model Training](#model-training)
 - [Results](#results)
-- [Contributing](#contributing)
+- [Conclusion](#conclusion)
 
-## INTRODUCTION
-In this project, we propose a system for detecting and monitoring forest fires using two cutting-edge deep learning algorithms (YOLO-v5 and Inception-v3), designed to detect fires at their earliest stages. This early warning system will critically analyse the scope of artificial intelligence, reduce the response time of fire authorities, and help them mitigate the loss of life and property caused by forest fires before they spread uncontrollably. This system will increase the reliability and accuracy of fire detection and monitoring operations and contribute to the overall sustainability and resilience of forest ecosystems.
+## WHAT IS FIRE EYE?
+Fire Eye is a system developed for detecting and monitoring forest fires using two cutting-edge deep learning algorithms (YOLO-v5 and Inception-v3), designed to detect fires at their earliest stages. This early warning system critically analyses the scope of artificial intelligence, reduces the response time of fire authorities, and helps them mitigate the loss of life and property caused by forest fires before they spread uncontrollably. This system increases the reliability and accuracy of fire detection and monitoring operations and contributes to the overall sustainability and resilience of forest ecosystems.
  
 ## FEATURES
 - Includes real-time monitoring feature, using YOLO algorithm for early detection and rapid response to wildfires
@@ -90,3 +88,13 @@ history =model.fit_generator(train, validation_data=validation, epochs=50,
 5. Save the model for evaluation and prediction
 
 ## RESULTS
+![Results](https://github.com/Amerzish-25/Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website/assets/106583511/4c548aea-4477-4631-a059-b94e0917ca1f)
+
+### Yolov5 Results Visualization:
+![val_batch0_pred](https://github.com/Amerzish-25/Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website/assets/106583511/f395a8f1-5091-419b-8d3d-3b4005cd05b2)
+
+### Inception v3 Results Visualization:
+![predicted_images (3copy)](https://github.com/Amerzish-25/Fire_Eye-A_Real-Time_Forest_Fire_and_Smoke_Detection_Website/assets/106583511/25fa18ee-f3c9-4107-baa1-b8a8b08c6960)
+
+## CONCLUSION
+In conclusion, the Fire Eye represents a significant step forward in using technology to enhance forest fire detection and monitoring. As a collaborative and open-source project, we invite contributors from around the world to join us in further refining and expanding the capabilities of Fire Eye. Thank you for exploring our project.
