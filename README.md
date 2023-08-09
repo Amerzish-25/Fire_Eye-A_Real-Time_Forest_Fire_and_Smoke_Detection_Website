@@ -62,7 +62,7 @@ cd yolov5
 ```
 pip install -r requirements.txt
 ```
-4. Train the model
+4. Train the model on custom dataset
 ```
 !python train.py --img 640 --batch 64 --epochs 70 --data custom_train.yaml --weights yolov5s.pt 
 ```
